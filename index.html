@@ -1,0 +1,412 @@
+    <!DOCTYPE html>
+    <html lang= "en">
+        <head>
+            <meta charset="UTF-8"> <!--character encoding to support letters/symbols/emojis etc.-->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--using Internet Explorer's latest rendering engine-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--controling how site looks on mobile devices-->
+            <title>interactive portfolio website</title>
+         <!--box icons-->
+         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+         <!--custom css-->
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+            <!--header design-->
+            <header class="header">
+                <a href="#" class="logo">Isiri Perera</a>
+                <i class='bx bx-menu' id='menu-icon'></i>
+                <nav class="navbar">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#Experiences">Experiences</a>
+                    <a href="#contact">Contact</a>
+                </nav>            
+            </header>
+            <!-- home section design -->
+            <section class="home" id="home">
+                <video autoplay muted loop playsinline class="bg-video">
+                    <source src="vid.mp4" type="video/mp4">
+                </video>
+                <div class="home-content">
+                    <h3>Hello, It's</h3>
+                    <h1><span class = "multiple-text"></span></h1>
+                    <p> I'm a fourth year Computer Engineering student at the University of British Columbia</p>
+                    <p>(minor in commerce)</p>
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/isiri-perera-181a87306"><i class="bx bxl-linkedin-square"></i></a>
+                        <a href="https://github.com/Isiri145"><i class="bx bxl-github" ></i></a>
+                        <a href="mailto:isiriperera570@gmail.com"><i class="bx bxl-gmail" ></i></a>
+                    </div>
+                    <a href="#contact" class="btn"> Contact Me</a>
+                </div>
+                
+            </section>
+
+
+            <!-- about section design -->
+            <section class="about" id="about">
+                <div class="about-img">
+                    <img src="about.png" alt="">
+                </div>
+
+                <div class="about-content">
+                    <h2 class="heading">About <span> Me</span></h2>
+                    <p>
+                        I’m a fourth-year Computer Engineering student with a passion for blending
+                        creativity and technical skills to build innovative solutions.<br> As a tech steward,
+                        I believe in creating solutions that are not only efficient but also ethical
+                        and impactful.<br> My tree of interests branch into advancing biomedical technologies, machine learning, academic research, applied AI, 
+                        problem-solving, and fostering sustainable approaches to technology.<br>
+                        I’m currently working as an undergraduate research assistant at UBC ultrasound lab to support
+                        the development and validation of an ultrasound-based patch device for monitoring CPR
+                        quality during cardiac arrest treatment.
+
+                    </p>
+                </div>
+            </section>
+
+            <!-- projects section design -->
+            <section class="projects" id="projects">
+                <h2 class="heading">Latest <span>Projects</span></h2>
+                
+                <div class="projects-container">
+                    <div class="projects-box">
+                        <img src="project1.png"  alt="">
+                        <div class="projects-layer">
+                            <h4>SolidWorks Design Project</h4>
+                            <p>(group project)</p>
+                            <a href="#" onclick="openProject(1); return false;"><i class="bx bx-link-external icon" ></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="projects-box">
+                        <img src="project2.png"  alt="">
+                        <div class="projects-layer">
+                            <h4>OS/161: Building a Unix-like Operating System</h4>
+                            <a href="#" onclick="openProject(2); return false;"><i class="bx bx-link-external icon" ></i></a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="projects-box">
+                        <img src="project5.png" alt="">
+                        <div class="projects-layer">
+                            <h4>Chat Application</h4>
+                            <p>(group project)</p>
+                            <a href="#" onclick="openProject(3); return false;"><i class="bx bx-link-external icon" ></i></a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="projects-box">
+                        <img src="project4.png" alt="">
+                        <div class="projects-layer">
+                            <h4>Athlete Injury Prediction</h4>
+                            <p>(group project)</p>
+                            <a href="#" onclick="openProject(4); return false;"><i class="bx bx-link-external icon" ></i></a>
+                        </div>
+                    </div>
+
+                    <div class="projects-box">
+                        <img src="project5.png"  alt="">
+                        <div class="projects-layer">
+                            <h4>Athlete Scouting and Recruitment DBMS</h4>
+                            <p>(group project)</p>
+                            <a href="#" onclick="openProject(5); return false;"><i class="bx bx-link-external icon" ></i></a>
+                        </div>
+                    </div>
+
+                    <div class="projects-box">
+                        <img src="project6.png"  alt="">
+                        <div class="projects-layer">
+                            <h4>Company website</h4>
+                            <a href="#" onclick="openProject(6); return false;"><i class="bx bx-link-external icon" ></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+<!--NEW-->
+            <!--Expanded project cards-->
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+
+                    <h2 id="modal-title"></h2>
+                    <img id="modal-image">
+
+                    <p id="modal-description"></p>
+                </div>
+            </div>
+<!--NEW-->
+            <!-- Experiences -->
+            <section class="Experiences" id="Experiences">
+                <h2 class="section__title">
+                    Educational/Work <span> Experiences</span>
+                </h2>
+                <div class="work__container grid">
+                    <div class="work__tabs">
+                     
+                     <!-- button education-->
+                     <button class="work__button work-active" data-target="#education">
+                        Education <i class="bx bxs-graduation"></i>
+                     </button>
+
+                        <!-- button experience -->
+                     <button class="work__button" data-target="#experience">
+                        Experience <i class="bx bx-briefcase-alt-2"></i> 
+                     </button>
+                     
+                    </div>
+
+                
+                    <div class="work__area">
+                        <div class="work__line"></div>
+
+
+
+                        <!-- content experience -->
+                        <div class="work__content" data-content id="experience">
+
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title">Research Assistant (CPR patch device development)</h1>
+                                        <h2 class="work__year">In Progress</h2>
+                                    </div>
+                                    <h3 class="work__subtitle">Ultrasound Medical Device Development (Machine Learning and Signal Processing)</h3> 
+
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    
+                                    <ul class="work__description">
+                                        currently in progress
+                                    
+
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title">Camps Instructor (Coding and Game Design)</h1>
+                                        <h2 class="work__year">2025</h2>
+                                    </div>
+                                    <h3 class="work__subtitle">Geering Up Engineering Outreach Program</h3>
+                                   
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    
+                                    <ul class="work__description">
+                                            <li>
+                                                Delivered technical instruction and support to 30+ students weekly in camps,
+                                                fostering foundational skills in coding, game design, and troubleshooting.
+                                            </li>
+
+                                            <li>
+                                                Led interactive lessons on programming (e.g., Python, Scratch) and basic
+                                                circuitry using Arduinos.
+                                            </li>
+
+                                            <li>
+                                                Diagnosed and resolved software and hardware issues during camp activities
+                                                to ensure smooth operation of class projects and tech demos.
+                                            </li>
+
+                                            <li>
+                                                Provided one-on-one support to students facing technical challenges,
+                                                developing problem‑solving and interpersonal skills essential for IT support roles.
+                                            </li>
+                                        </ul>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+
+
+                        <!-- content education -->
+                        <div class="work__content work-active" data-content id="education">
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title">CPEN 331 (Operating Systems)</h1>
+                                        <h2 class="work__year">2025</h2>
+                                    </div>
+                                    <h3 class="work__subtitle">University (3rd year)</h3>  
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    <p class="work__description">
+                                        Implemented OS161 kernel. This included conditional variables, semaphores,
+                                        file_descripters,  syscalls including fork, execv and virtual memory
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title">CPEN 355 (Machine Learning with Engineering Applications)</h1>
+                                        <h2 class="work__year">2026</h2>
+                                    </div>
+                                    <h3 class="work__subtitle">University (3rd year)</h3>
+                                    
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    <p class="work__description">
+                                      Developed and implemented machine learning models for engineering applications, 
+                                      including linear and logistic regression, decision trees, support vector machines 
+                                      (SVMs), and deep neural networks (DNNs). Applied data preprocessing, feature engineering, 
+                                      model training, evaluation, and performance analysis to supervised learning problem  
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title">CPSC 320 (Intermediate Algorithm Design and Analysis)</h1>
+                                        <h2 class="work__year">2026</h2>
+                                    </div>
+                                    <h3 class="work__subtitle">University (3rd year)</h3>
+                                    
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    <p class="work__description">
+                                        Analyzed algorithm efficiency using asymptotic notation and runtime analysis.
+                                        Designed and optimized algorithms using divide and conquer, dynamic programming, greedy strategies, and amortized analysis.
+                                        Implemented both top-down memoized and bottom-up iterative dynamic programming solutions.
+                                        Solved LeetCode-style algorithmic problems, emphasizing time/space optimization, correctness, and efficient problem decomposition.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title"> CPSC 304 (Introduction to Relational Databases)</h1>
+                                        <h2 class="work__year">2026</h2>
+                                    </div>
+                                    <h3 class="work__subtitle">University (3rd year)</h3>
+                                    
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    <p class="work__description">
+                                        Learned E/R modeling, logical data modeling, normalization (3NF and BCNF), integrity constraints, and DBMS 
+                                        implementation. Applied relational algebra and SQL to query, insert, update, and delete 
+                                        data using complex conditions, aggregation, grouping, and filtering. Built data-centric 
+                                        application using PHP and Oracle Database in a group project. Learned data warehousing 
+                                        and OLAP, including star/snowflake schemas, and association rule 
+                                        mining using the Apriori algorithm, support, and confidence. Compared data warehousing/OLAP 
+                                        and data mining approaches with traditional OLTP/DBMS systems.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="work__card">
+                                <!-- LEFT SIDE -->
+                                <div class="work__left">
+                                    <div class="work__header">
+                                        <h1 class="work__title">Commerce Minor</h1>
+                                        <h2 class="work__year">2025</h2>
+                                    </div>
+                                    <ul class="work__subtitle">
+                                        <li>
+                                            ECON 101 - Principles of Microeconomics
+
+                                        </li>
+                                        <li>
+                                            ECON 102 - Principles of Macroeconomics
+
+                                        </li>
+                                        <li>
+                                            COMR 465 - Marketing Management
+                                        </li>
+                                         <li>
+                                            COMR 473 - Business Finance
+                                        </li>
+                                        <li>
+                                            CPEN 481 - Economic Analysis of Engineering Projects
+                                        </li>
+                                        <li>                                            
+                                            COMR 457 - Fundamentals of Financial Accounting
+                                        </li>
+                                       
+                                    </ul>
+                                    
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="work__right">
+                                    <p class="work__description">
+                                         Gained knowledge in business disciplines such as accounting, finance, 
+                                         marketing, organizational behaviour, and business strategy. 
+                                         UBC Commerce Minor is designed to complement an engineering degree,
+                                         providing a broader skill set and enhancing career opportunities
+                                         in technical and business roles 
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contact section design -->
+             <section class="contact" id="contact">
+                <h2 class="heading">Contact <span>Me</span></h2>
+                
+                <form action="https://formsubmit.co/isiriperera570@gmail.com" method="POST">
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email Address">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Mobile Number">
+                        <input type="text" placeholder="Email Subject">
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" placeholder="Send Message" class="btn">
+                </form>
+             </section>
+            <!-------------scroll reveallll--------------->
+             <script src="https://unpkg.com/scrollreveal"></script>
+
+            <!--typed js-->
+            <!-- <script scr="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+            <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+             <!--custom js-->
+            <script src="script.js"></script>
+        </body>
+    </html>
