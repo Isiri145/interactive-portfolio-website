@@ -1,5 +1,5 @@
-Interactive portfolio website
-*In progress
-Finish project descriptions
-replace the video files with links
-ADD LAST 2 PROJECTS
+Interactive portfolio website<br>
+*In progress<br>
+Finish project descriptions<br>
+replace the video files with links<br>
+ADD LAST 2 PROJECTS<br>
