@@ -2,3 +2,4 @@ Interactive portfolio website
 *In progress
 Finish project descriptions
 replace the video files with links
+ADD LAST 2 PROJECTS
