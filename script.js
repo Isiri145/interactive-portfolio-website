@@ -151,7 +151,7 @@ function openProject(id) {
 
     if(id === 4){
         document.getElementById("modal-title").textContent =
-            "Athlete Injury Prediction";
+            "Athlete Injury Prediction/constellation identifier";
 
         document.getElementById("modal-image").src =
             "project4.png";
