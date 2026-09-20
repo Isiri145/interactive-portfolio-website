@@ -1,5 +1,5 @@
-Interactive portfolio website<br>
-*In progress<br>
-replace the video files with links<br>
-ADD LAST 2 PROJECTS<br>
-
+Interactive portfolio website
+*In progress
+Finish project descriptions
+replace the video files with links
+Change background image and deploy on Github pages (update file sizes)
