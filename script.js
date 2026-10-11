@@ -102,7 +102,7 @@ function openProject(id) {
 
         document.getElementById("modal-description").innerHTML = `
             <ul>
-                <li> Designed 50+ parts including the monocoque, cockpit, and wheels of a Formula 1 racing car using SolidWorks</li>
+                <li> Designed 50+ parts of the aerodynamic body including the monocoque, cockpit, and wheels of a Formula 1 racing car using SolidWorks</li>
                 <li> Assembled parts and sub-assemblies to model the vehicle body and assisted teammates with engine assembly</li>
                 <li> Conducted simulations and motion studies, optimizing the car’s core support structure</li>
             </ul?
@@ -140,34 +140,41 @@ function openProject(id) {
 
     if(id === 3){
         document.getElementById("modal-title").textContent =
-            "SolidWorks Design Project";
+            "Chat Application with AI Action Item Extraction";
 
         document.getElementById("modal-image").src =
-            "project5.png";
+            "project3.png";
 
-        document.getElementById("modal-description").textContent =
-            "This project involved...";
+        document.getElementById("modal-description").innerHTML =
+            `<ul>
+                <li> Developed a full-stack, real-time chat application using JavaScript, Node.js, Express, and MongoDB, tailored for project groups and workplace coworkers</li>
+                <li> Implemented WebSocket-based messaging and REST APIs for user authentication, room management, and chat history</li>
+                <li> Integrated a LLaMA language model to identify actionable tasks, assignees, and deadlines from natural-language conversations</li>
+                <li> Built an action-item list that automatically displays extracted tasks assigned to each user</li>
+                <li> Enabled users to update task details and delete completed action items through an interactive interface</li>
+            </ul>`;
     }
 
     if(id === 4){
         document.getElementById("modal-title").textContent =
-            "Athlete Injury Prediction/constellation identifier";
+            "ML Athlete Injury Predictor (Group Project)";
 
         document.getElementById("modal-image").src =
             "project4.png";
 
         document.getElementById("modal-description").innerHTML = `
             <ul>
-                <li>Designed 50+ parts including the monocoque, cockpit, and wheels of a Formula 1 racing car using SolidWorks.</li>
-                <li>Assembled parts and sub-assemblies to model the vehicle body and assisted teammates with engine assembly.</li>
-                <li>Conducted simulations, motion studies, and collision detection to optimize the car’s core support structure.</li>
+                <li>Developed a supervised machine learning pipeline to predict athlete injury risk using demographic, training, and physiological features</li>
+                <li>Implemented Logistic Regression and Decision Tree classifiers for supervised binary injury prediction</li>
+                <li>Compared model performance across datasets with varying feature complexity to evaluate the impact of feature selection</li>
+                <li>Evaluated multiple models, with Random Forest achieving 99% accuracy and 0.96 ROC-AUC on the evaluated dataset; identified EMG amplitude and ground reaction force as key injury predictors</li>
             </ul>
         `;
     }
 
     if(id === 5){
         document.getElementById("modal-title").textContent =
-            "Athlete Scouting and Recruitment DBMS";
+            "Athlete Scouting and Recruitment DBMS (Group Project)";
 
         document.getElementById("modal-image").src =
             "project5.png";
@@ -195,9 +202,9 @@ function openProject(id) {
 
         document.getElementById("modal-description").innerHTML = `
             <ul>
-                <li> Designed clear, intuitive UI/UX with straightforward navigation and content flow.</li>
-                <li> Built responsive layouts and resized the site for phones, tablets, and multiple screen widths.</li>  
-                <li>Developed and hosted the website using semantic HTML, CSS, JavaScript, and GitHub Pages.</li>
+                <li> Designed clear, intuitive UI/UX with straightforward navigation and content flow</li>
+                <li> Built responsive layouts and resized the site for phones, tablets, and multiple screen widths</li>  
+                <li>Developed and hosted the website using semantic HTML, CSS, JavaScript, and GitHub Pages</li>
             </ul>
             <br><br>
             <strong>SKILLS GAINED:</strong> JavaScript, HTML, CSS, UI/UX design<br><br>

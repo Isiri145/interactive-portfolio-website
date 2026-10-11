@@ -166,7 +166,7 @@ span{
 }
 
 .about-img img{
-    width: 30vw;
+    width: 35vw;
 }
 
 .heading{
@@ -534,7 +534,7 @@ span{
 
 #modal-image {
     display: block;
-    width: 400px;
+    width: 500px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
