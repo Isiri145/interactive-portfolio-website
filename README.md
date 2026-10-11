@@ -1,5 +1,4 @@
-Interactive portfolio website
-*In progress
-Finish project descriptions
-replace the video files with links
-Change background image and deploy on Github pages (update file sizes)
+# ✨My portfolio✨
+A website that showcases my projects and skills<br>
+Check it out from this link: [https://isiri145.github.io/portfolio/](https://isiri145.github.io/interactive-portfolio-website/)
+
